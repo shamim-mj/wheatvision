@@ -87,8 +87,7 @@ st.markdown("""
     </style>
     <div class="header-box">
             <h1 style='text-align: center; color: #004aad; font-size: 2.5rem; margin-bottom: 0px;'>
-                Agricultural Analysis <br>
-                🌾 WheatVision AI
+                🌾 WheatVision
             </h1>
             <p style='text-align: center; color: #666; font-size: 1.1rem; margin-top: -10px;'>
                 Precision Wheat Head Detection & Yield Assessment
