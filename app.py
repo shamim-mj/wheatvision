@@ -121,14 +121,15 @@ with tab1:
     
     camera_file = None
     if use_camera:
-        camera_file = st.camera_input("📷 Take a Field Photo", label_visibility="collapsed")
+        camera_file = st.camera_input("📷 Take a Field Photo", label_visibility="collapsed", key="wheat_cam")
 
     # Determine Source
     input_source = uploaded_file if uploaded_file else camera_file
 
     if input_source:
         img = Image.open(input_source)
-        
+        # ADD THIS LINE: It clears the 'old' image from memory
+        st.cache_resource.clear() 
         # Run AI
         with st.spinner("🤖 AI is counting..."):
             results = model.predict(source=img, conf=conf_threshold)
