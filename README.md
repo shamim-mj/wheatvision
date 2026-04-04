@@ -1,4 +1,4 @@
-# 🌾 WheatVision AI: Agricultural Precision Analysis
+# 🌾 WheatVision AI: Precision Wheat Head Detection & Yield Assessment
 
 [![Streamlit App](https://streamlit.io)](https://streamlit.app)
 [![University of Kentucky](https://shields.io)](https://uky.edu)
@@ -40,13 +40,15 @@ If you wish to run this tool locally on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git [clone https://github.com](https://github.com/shamim-mj/wheatvision.git)
+   git clone https://github.com/shamim-mj/wheatvision.git
    cd wheatvision
-   ```
+
 2. **Install dependencies:**
-    pip install -r requirements.txt
-3. **Run the app:**
-    streamlit run app.py
+  ```bash
+  pip install -r requirements.txt
+4. **Run the app:**
+```bash
+  streamlit run app.py
    <br><br><br>
 **👨‍🔬 About the Developer:**
 Mohammad Shamim
