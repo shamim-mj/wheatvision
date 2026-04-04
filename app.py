@@ -134,7 +134,7 @@ with tab1:
         with st.spinner("🤖 AI is counting..."):
             results = model.predict(source=img, conf=conf_threshold)
             # Clean Plot: No labels, thin lines
-            res_plotted = results[0].plot(labels=False, line_width=2, probs=False, boxes=True)
+            res_plotted = results[0].plot(labels=False, line_width=2, probs=False, boxes=True, conf=False)
             res_plotted_rgb = Image.fromarray(res_plotted[..., ::-1])
             count = len(results[0].boxes)
 
