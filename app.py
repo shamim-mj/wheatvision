@@ -59,8 +59,8 @@ st.markdown("""
     .header-box {
         background-color: rgba(255, 255, 255, 0.8); /* Light beautiful background */
         backdrop-filter: blur(10px);
-        padding: 30px;
-        border-radius: 20px;
+        padding: 0px;
+        border-radius: 10px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         text-align: center;
         margin-bottom: 20px;
@@ -81,7 +81,7 @@ st.markdown("""
             font-size: 2.0rem !important; /* Smaller for mobile */
         }
         .header-box {
-            padding: 15px; /* Less padding on small screens */
+            padding: 5px; /* Less padding on small screens */
         }
     }
     </style>
@@ -92,7 +92,7 @@ st.markdown("""
             <p style='text-align: center; color: #666; font-size: 1.1rem; margin-top: -10px;'>
                 Precision Wheat Head Detection & Yield Assessment
              </p>
-            <hr style='margin-top: 5px; margin-bottom: 25px;'>
+            <hr style='margin-top: 1px; margin-bottom: 1px;'>
     </div>
     """, unsafe_allow_html=True)
 
@@ -107,7 +107,7 @@ model = load_model()
 # --- 3. SIDEBAR CONFIG ---
 with st.sidebar:
     st.header("🛠️ Settings")
-    conf_threshold = st.slider("Sensitivity", 0.0, 1.0, 0.25)
+    conf_threshold = st.slider("Sensitivity", 0.0, 1.0, 0.16)
     st.divider()
     use_camera = st.toggle("📸 Enable Field Camera", value=False)
 
@@ -133,7 +133,7 @@ with tab1:
         with st.spinner("🤖 AI is counting..."):
             results = model.predict(source=img, conf=conf_threshold)
             # Clean Plot: No labels, thin lines
-            res_plotted = results[0].plot(labels=False, line_width=2)
+            res_plotted = results[0].plot(labels=False, line_width=2, probs=False, boxes=True)
             res_plotted_rgb = Image.fromarray(res_plotted[..., ::-1])
             count = len(results[0].boxes)
 
@@ -240,10 +240,10 @@ with tab3:
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Using columns to center the contact card
-    _, center_col, _ = st.columns([1, 2, 1])
+    _, center_col, _ = st.columns([0.1, 2.8, 0.1])
     
     with center_col:
-        st.markdown("<h2 style='text-align: center; color: #0033A0;'>Get in Touch</h2>", unsafe_allow_html=True)
+        # st.markdown("<h2 style='text-align: center; color: #0033A0;'>Get in Touch</h2>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; color: #666;'>Have questions about WheatVision AI or my research? Send a message below.</p>", unsafe_allow_html=True)
         
         with st.container(border=True):
