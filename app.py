@@ -145,9 +145,9 @@ with tab1:
         
         col_img1, col_img2 = st.columns(2)
         with col_img1:
-            st.image(img, caption="Original", use_column_width=True)
+            st.image(img, caption="Original", width='stretch')
         with col_img2:
-            st.image(res_plotted_rgb, caption=f"Detected: {count} heads", use_column_width=True)
+            st.image(res_plotted_rgb, caption=f"Detected: {count} heads", width='stretch')
         
         # Results Summary with Icons
         #c1, c2, c3 = st.columns(3)
