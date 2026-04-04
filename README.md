@@ -38,21 +38,24 @@ Our model has been rigorously validated to ensure reliable field performance:
 
 If you wish to run this tool locally on your machine:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/shamim-mj/wheatvision.git
-   cd wheatvision
-
-2. **Install dependencies:**
-  ```bash
-  pip install -r requirements.txt
-4. **Run the app:**
+### 1. Clone the repository:
 ```bash
-  streamlit run app.py
-   <br><br><br>
-**👨‍🔬 About the Developer:**
-Mohammad Shamim
-Crop Physiologist / Agronomist / Grain Crops Extension & Research Associate
-University of Kentucky
-Specializing in eco-physiological responses of crop species, Data Analytics, and the development of Decision Support Tools for modern agriculture.
-**Note:** This tool is intended for research and extension purposes. Environmental factors and crop variety may impact individual results.
+git clone https://github.com/shamim-mj/wheatvision.git
+cd wheatvision
+```
+### 2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+### 3. Run the App:
+```bash
+streamlit run app.py
+```
+<br>
+
+**👨‍🔬 About the Developer:** <br>
+    Mohammad Shamim
+      Crop Physiologist / Agronomist / Grain Crops Extension & Research Associate<br>
+      University of Kentucky<br>
+      Specializing in eco-physiological responses of crop species, Data Analytics, and the development of Decision Support Tools for modern agriculture.<br>
+      **Note:** This tool is intended for research and extension purposes. Environmental factors and crop variety may impact individual results.
