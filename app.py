@@ -12,7 +12,7 @@ os.environ["OMP_NUM_THREADS"] = "1"
 # --- 1. PAGE CONFIG & BLUE TAB STYLING ---
 st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="centered")
 
-st.write("Python version:", sys.version)
+# st.write("Python version:", sys.version)
 st.markdown("""
     <style>
             
