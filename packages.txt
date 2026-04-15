@@ -1,3 +1,6 @@
 libglib2.0-0
-libffi8
-libpcre3
+libglib2.0-dev
+libgl1
+libsm6
+libxext6
+libxrender1
