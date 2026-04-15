@@ -5,10 +5,12 @@ import numpy as np
 import time
 import pandas as pd
 import io  # Required for the download button to work correctly
+import sys
 
 # --- 1. PAGE CONFIG & BLUE TAB STYLING ---
 st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="centered")
 
+st.write("Python version:", sys.version)
 st.markdown("""
     <style>
             
@@ -145,9 +147,9 @@ with tab1:
         
         col_img1, col_img2 = st.columns(2)
         with col_img1:
-            st.image(img, caption="Original", use_column_width=True)
+            st.image(img, caption="Original", width='stretch')
         with col_img2:
-            st.image(res_plotted_rgb, caption=f"Detected: {count} heads", use_column_width=True)
+            st.image(res_plotted_rgb, caption=f"Detected: {count} heads", width='stretch')
         
         # Results Summary with Icons
         #c1, c2, c3 = st.columns(3)
