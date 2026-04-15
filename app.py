@@ -12,19 +12,6 @@ os.environ["OMP_NUM_THREADS"] = "1"
 # --- 1. PAGE CONFIG & BLUE TAB STYLING ---
 st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="centered")
 
-
-# use to hide the hamburger
-hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-
-
 # st.write("Python version:", sys.version)
 st.markdown("""
     <style>
@@ -103,7 +90,7 @@ st.markdown("""
     }
     </style>
     <div class="header-box">
-            <h1 style='text-align: center; color: #004aad; font-size: 2.5rem; margin-bottom: 0px;'>
+            <h1 style='text-align: center; color: #004aad; font-size: 2.3rem; margin-bottom: 0px;'>
                 🌾 WheatVision AI
             </h1>
             <p style='text-align: center; color: #666; font-size: 1.1rem; margin-top: -10px;'>
