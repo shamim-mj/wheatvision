@@ -7,7 +7,7 @@ import pandas as pd
 import io  # Required for the download button to work correctly
 import sys
 import os
-os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+os.environ["OMP_NUM_THREADS"] = "1"
 
 # --- 1. PAGE CONFIG & BLUE TAB STYLING ---
 st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="centered")
