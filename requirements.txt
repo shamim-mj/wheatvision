@@ -1,7 +1,6 @@
+opencv-python-headless==4.8.1.78
+ultralytics==8.3.0
 streamlit
-ultralytics>=8.0
-torch
-opencv-python-headless
-numpy
-Pillow
+pillow
 pandas
+numpy==1.26.4
