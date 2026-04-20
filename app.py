@@ -1,6 +1,8 @@
 import os
+os.environ["YOLO_CONFIG_DIR"] = "/tmp/Ultralytics"
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
 
 import cv2
 cv2.setNumThreads(0)
