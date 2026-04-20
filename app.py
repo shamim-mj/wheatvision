@@ -149,7 +149,7 @@ with tab1:
         
         # Run AI
         with st.spinner("🤖 AI is counting..."):
-            results = model.predict(source=img, conf=conf_threshold)
+            results = model.predict(source=img, conf=conf_threshold,   max_det = 2000)
             # Clean Plot: No labels, thin lines
             res_plotted = results[0].plot(labels=False, line_width=2, probs=False, boxes=True)
             res_plotted_rgb = Image.fromarray(res_plotted[..., ::-1])
