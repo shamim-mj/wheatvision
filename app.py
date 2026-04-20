@@ -240,7 +240,7 @@ with tab2:
         st.success(f"✅ Processed {len(uploaded_files)} images successfully!")
         
         # 3. Show the table in the app
-        st.dataframe(df, width= 'stretch')
+        st.dataframe(df, use_container_width=True)
 
         # 4. Create the CSV Download Button
         st.divider()
