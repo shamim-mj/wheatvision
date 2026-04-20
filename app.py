@@ -1,14 +1,22 @@
 import os
-os.environ["OMP_NUM_THREADS"] = "0"
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
-import streamlit as st
-from ultralytics import YOLO
-from PIL import Image
+import cv2
+cv2.setNumThreads(0)
+
+
 import numpy as np
-import time
+from PIL import Image
+
+from ultralytics import YOLO
+import streamlit as st
+
 import pandas as pd
-import io  # Required for the download button to work correctly
+import time
+import io # Required for the download button to work correctly
 import sys
+
 
 
 # --- 1. PAGE CONFIG & BLUE TAB STYLING ---
