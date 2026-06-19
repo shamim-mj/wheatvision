@@ -3,7 +3,7 @@
 [![Streamlit App](https://streamlit.io)](https://streamlit.app)
 [![University of Kentucky](https://shields.io)](https://uky.edu)
 
-**WheatVision AI** is a professional-grade decision support tool designed to automate the detection and counting of wheat heads from field imagery. Developed for agronomists, researchers, and producers, this tool leverages state-of-the-art Computer Vision (YOLOv11) to provide rapid yield assessments.
+**WheatVision AI** is decision support tool designed to automate the detection and counting of wheat heads from field imagery. Developed for agronomists, researchers, and producers, this tool leverages state-of-the-art Computer Vision (YOLOv11) to provide rapid yield assessments.
 
 ---
 
