@@ -1,7 +1,7 @@
 # 🌾 WheatVision AI: Precision Wheat Head Detection & Yield Assessment
 
-[![Streamlit App](https://streamlit.io)](https://streamlit.app)
-[![University of Kentucky](https://shields.io)](https://uky.edu)
+[Streamlit App](https://streamlit.io) <br>
+[University of Kentucky](https://uky.edu)
 
 **WheatVision AI** is decision support tool designed to automate the detection and counting of wheat heads from field imagery. Developed for agronomists, researchers, and producers, this tool leverages state-of-the-art Computer Vision (YOLOv11) to provide rapid yield assessments.
 
@@ -37,8 +37,11 @@ Our model has been rigorously validated to ensure reliable field performance:
 ## 📦 Installation (Local Use)
 
 If you wish to run this tool locally on your machine, you will need to have the following requirements met:
-  1. Python 3 and Anaconda installed in your machine.
-  2. Streamlit isntalled using pip. 
+  1. Python 3 and Anaconda installed in your machine.<br>
+     a. [Download Python](https://www.python.org/downloads/)<br>
+     b. [Download Anaconda](https://www.lancaster.ac.uk/staff/drummonn/PHYS281/demo-anaconda/)
+  3. Streamlit isntalled using pip.<br>
+     a. Open Anaconda and type "pip install streamlit". Follow the link for further instructions: [Install Streamlit](https://docs.streamlit.io/get-started/installation)
 
 ### 1. Clone the repository:
 ```bash
