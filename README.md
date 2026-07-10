@@ -36,7 +36,9 @@ Our model has been rigorously validated to ensure reliable field performance:
 
 ## 📦 Installation (Local Use)
 
-If you wish to run this tool locally on your machine:
+If you wish to run this tool locally on your machine, you will need to have the following requirements met:
+  1. Python 3 and Anaconda installed in your machine.
+  2. Streamlit isntalled using pip. 
 
 ### 1. Clone the repository:
 ```bash
