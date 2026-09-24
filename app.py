@@ -378,7 +378,7 @@ with tab1:
         # Resolve final phone & focal
         if enable_area:
             phone_used = detected_phone if auto_detect else (manual_phone or "Other / Unknown")
-            focal_used = focal_exif if auto_detect else None
+            focal_used = focal_exif # EXIF always wins if available; calculate_area() handles fallback    previous: focal_exif if auto_detect else None
             area_info  = calculate_area(img_w_px, img_h_px, height_m, phone_used, focal_used)
 
         # ── EXIF FEEDBACK ─────────────────────────
