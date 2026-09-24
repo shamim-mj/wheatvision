@@ -391,7 +391,7 @@ with tab1:
             elif has_make:
                 st.info(
                     f"📷 Detected: **{exif.get('Make','')} {exif.get('Model','')}** "
-                    f"→ **{phone_used}** | Focal from database: **{area_info['focal_used']}mm**"
+                    f"→ | Focal from database: **{area_info['focal_used']}mm**"
                 )
             else:
                 st.warning(
