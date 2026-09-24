@@ -386,7 +386,7 @@ with tab1:
             if has_make and focal_exif:
                 st.success(
                     f"📷 Detected: **{exif.get('Make','')} {exif.get('Model','')}** "
-                    f"→ **{phone_used}** | Focal: **{focal_exif}mm** (EXIF ✅)"
+                    f"→ | Focal: **{focal_exif}mm** (EXIF ✅)"
                 )
             elif has_make:
                 st.info(
