@@ -330,6 +330,7 @@ with tab1:
     </div>
     """, unsafe_allow_html=True)
 
+
     uploaded_file = st.file_uploader(
         "📤 Upload Field Photo (from Camera Roll or Files)",
         type=["jpg", "png", "jpeg"],
@@ -337,12 +338,23 @@ with tab1:
         help="iPhone: tap Browse → Photos | Android: tap Files → Gallery"
     )
 
-    with st.expander("📷 Or use in-app camera (optional / limited)"):
-        st.warning("⚠️ May default to **front (selfie) camera** on some phones. "
-                   "Switch to rear manually if needed.")
+    # ── IN-APP CAMERA — only activates when user requests it ──
+    use_camera = st.checkbox(
+        "📷 Use in-app camera instead",
+        value=False,
+        help="Check this ONLY if you want to take a photo directly in the browser."
+    )
+
+    camera_file = None
+    if use_camera:
+        st.warning(
+            "⚠️ May default to **front (selfie) camera** on some phones. "
+            "Switch to rear camera manually if needed."
+        )
         camera_file = st.camera_input("", label_visibility="collapsed", key="wheat_cam")
 
     input_source = uploaded_file if uploaded_file else camera_file
+
 
     if input_source:
         img = Image.open(input_source)
