@@ -544,8 +544,8 @@ with tab3:
                         unsafe_allow_html=True)
             st.markdown("""
             <div style='text-align:center;margin-bottom:20px'>
-                <p style='margin:10px 0'><b> Postdoctoral Researcher & Grain Crops Extension Associate</b></p>
-
+                <p style='margin:10px 0'><b>Crop Physiologist / Agronomist /
+                Grain Crops Extension Associate</b></p>
                 <p style='font-size:0.9em;color:#555;font-weight:bold'>University of Kentucky</p>
             </div>
             """, unsafe_allow_html=True)
