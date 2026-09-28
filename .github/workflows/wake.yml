@@ -1,0 +1,38 @@
+name: Keep WheatVision Awake
+on:
+  schedule:
+    - cron: '0 */8 * * *'   # every 8 hours
+  workflow_dispatch:          # allow manual trigger
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install selenium webdriver-manager
+      - name: Wake app
+        run: |
+          python - <<'EOF'
+          from selenium import webdriver
+          from selenium.webdriver.chrome.options import Options
+          from selenium.webdriver.chrome.service import Service
+          from webdriver_manager.chrome import ChromeDriverManager
+          import time
+
+          opts = Options()
+          opts.add_argument("--headless")
+          opts.add_argument("--no-sandbox")
+          opts.add_argument("--disable-dev-shm-usage")
+
+          driver = webdriver.Chrome(
+              service=Service(ChromeDriverManager().install()), options=opts)
+          driver.get("https://wheatvision.streamlit.app/")
+          time.sleep(15)   # wait for WebSocket to fully connect
+          print(f"Title: {driver.title}")
+          driver.quit()
+          EOF
