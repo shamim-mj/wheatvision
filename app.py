@@ -17,6 +17,16 @@ import streamlit as st
 # 1. PAGE CONFIG & STYLING
 # =============================================================
 st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="wide")
+st.markdown("""
+<style>
+[data-testid="stToolbar"], [data-testid="stAppDeployButton"], .stAppDeployButton,
+[data-testid="stMainMenu"], #MainMenu, [data-testid="stDecoration"], footer {
+    display: none !important;
+}
+header[data-testid="stHeader"] { background: transparent !important; }
+</style>
+""", unsafe_allow_html=True)
+
 
 st.markdown("""
 <style>
