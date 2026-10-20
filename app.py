@@ -262,7 +262,7 @@ def show_quick_tips():
 # =============================================================
 # 5. TABS
 # =============================================================
-tab1, tab2, tab3 = st.tabs(["🎯 Single", "📂 Batch", "📧 Contact"])
+tab1, tab2, tab3 = st.tabs(["🎯 Single Image", "📂 Batch Process", "📧 Contact"])
 
 # ---------------- TAB 1: SINGLE ----------------
 with tab1:
