@@ -66,6 +66,22 @@ st.markdown("""
     /* Tips card: tighter */
     .tip-card { font-size: 0.85rem; padding: 8px 10px; line-height: 1.45; }
 }
+
+/* Hide the top-right toolbar (Fork, GitHub, Share, star, menu) */
+[data-testid="stToolbar"],
+[data-testid="stToolbarActions"],
+[data-testid="stAppDeployButton"],
+.stDeployButton,
+#MainMenu { display: none !important; visibility: hidden !important; }
+
+/* Hide the coloured line at the top and the default footer */
+[data-testid="stDecoration"] { display: none !important; }
+footer { visibility: hidden !important; }
+
+/* Make the header transparent instead of removing it (keeps the sidebar ">" button) */
+header[data-testid="stHeader"] { background: transparent !important; }
+
+
 </style>
 <div class="header-box">
     <h1 style='text-align:center; color:#004aad; font-size:2.3rem; margin-bottom:0;'>🌾 WheatVision AI</h1>
