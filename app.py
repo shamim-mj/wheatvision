@@ -45,8 +45,8 @@ st.markdown("""
 @media only screen and (max-width: 1000px) {
     /* Main page container: less side and top padding */
     [data-testid="stMainBlockContainer"], .block-container {
-        padding-left: 0.6rem !important;
-        padding-right: 0.6rem !important;
+        padding-left: 0.4rem !important;
+        padding-right: 0.4rem !important;
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
     }
