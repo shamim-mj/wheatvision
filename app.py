@@ -43,9 +43,28 @@ st.markdown("""
 }
 .tip-title { color: #004aad; font-size: 1rem; font-weight: bold; }
 @media only screen and (max-width: 600px) {
-    .header-box h1 { font-size: 1.8rem !important; }
-    .header-box { padding: 5px; }
-    .tip-card { font-size: 0.85rem; }
+    /* Main page container: less side and top padding */
+    [data-testid="stMainBlockContainer"], .block-container {
+        padding-left: 0.6rem !important;
+        padding-right: 0.6rem !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    /* Header: smaller and tighter */
+    .header-box { padding: 4px 6px; margin-bottom: 10px; }
+    .header-box h1 { font-size: 1.7rem !important; }
+    .header-box p  { font-size: 0.95rem !important; margin-top: -6px !important; }
+
+    /* Tabs: smaller so all three fit */
+    .stTabs [data-baseweb="tab-list"] { gap: 4px; }
+    .stTabs [data-baseweb="tab"] {
+        height: 40px; padding: 6px 10px; font-size: 0.85rem;
+    }
+    .stTabs [data-baseweb="tab"] p { font-size: 0.85rem !important; }
+
+    /* Tips card: tighter */
+    .tip-card { font-size: 0.85rem; padding: 8px 10px; line-height: 1.45; }
 }
 </style>
 <div class="header-box">
@@ -243,7 +262,7 @@ def show_quick_tips():
 # =============================================================
 # 5. TABS
 # =============================================================
-tab1, tab2, tab3 = st.tabs(["🎯 Single Analysis", "📂 Batch Processing", "📧 Contact & Info"])
+tab1, tab2, tab3 = st.tabs(["🎯 Single", "📂 Batch", "📧 Contact"])
 
 # ---------------- TAB 1: SINGLE ----------------
 with tab1:
