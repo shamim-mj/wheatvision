@@ -47,7 +47,7 @@ st.markdown("""
     [data-testid="stMainBlockContainer"], .block-container {
         padding-left: 0.7rem !important;
         padding-right: 0.3rem !important;
-        padding-top: 3rem !important;
+        padding-top: 10rem !important;
         padding-bottom: 3rem !important;
     }
 
