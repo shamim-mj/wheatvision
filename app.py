@@ -200,7 +200,7 @@ with st.sidebar:
     st.divider()
 
     st.subheader("📐 Sampled Area")
-    area_method = st.radio("How should area be determined?",
+    area_method = st.radio("How should area be determined ? **ACCURACY IS VERY IMOPRTANT**",
                            ["Fixed camera height", "Manual area (quadrat / frame)"])
 
     # safe defaults so nothing breaks when switching methods
