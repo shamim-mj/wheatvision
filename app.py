@@ -16,7 +16,7 @@ import streamlit as st
 # =============================================================
 # 1. PAGE CONFIG & STYLING
 # =============================================================
-st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="centered")
+st.set_page_config(page_title="WheatVision AI", page_icon="🌾", layout="wide")
 
 st.markdown("""
 <style>
@@ -42,7 +42,7 @@ st.markdown("""
     padding: 10px 14px; margin-bottom: 12px; font-size: 0.92rem; color: #222; line-height: 1.6;
 }
 .tip-title { color: #004aad; font-size: 1rem; font-weight: bold; }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
     /* Main page container: less side and top padding */
     [data-testid="stMainBlockContainer"], .block-container {
         padding-left: 0.1rem !important;
