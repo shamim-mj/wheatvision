@@ -42,11 +42,11 @@ st.markdown("""
     padding: 10px 14px; margin-bottom: 12px; font-size: 0.92rem; color: #222; line-height: 1.6;
 }
 .tip-title { color: #004aad; font-size: 1rem; font-weight: bold; }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
     /* Main page container: less side and top padding */
     [data-testid="stMainBlockContainer"], .block-container {
-        padding-left: 0.1rem !important;
-        padding-right: 0.1rem !important;
+        padding-left: 0.3rem !important;
+        padding-right: 0.3rem !important;
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
     }
