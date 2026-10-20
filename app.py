@@ -210,8 +210,8 @@ with st.sidebar:
 
     if area_method == "Fixed camera height":
         camera_height_cm = st.number_input(
-            "Lens height above the HEADS (cm)", min_value=10.0, max_value=300.0, value=50.0, step=5.0,
-            help="Measure from the phone lens to the top of the wheat heads, not to the soil.")
+            "Lens height above the HEADS (cm)", min_value=10.0, max_value=150.0, value=50.0, step=5.0,
+            help="Measure from the phone lens to the top of the wheat heads (40-70 cm recommended)")
         lens_choice = st.selectbox("Camera lens",
                                    ["Auto (photo EXIF)"] + list(lens_presets.keys()) + ["Custom"])
         if lens_choice == "Custom":
@@ -261,16 +261,28 @@ with st.sidebar:
 
 
 # ---------- SHORT TIPS CARD (shown above the uploaders) ----------
+REC_MIN_CM, REC_MAX_CM = 40, 70   # recommended height range above the heads
+
 def show_quick_tips():
     if area_method == "Fixed camera height":
         f35 = lens_presets.get(lens_choice, 26.0)
         _, w_cm, l_cm = footprint_from_height(camera_height_cm, f35, 4032, 3024)
+
         steps = ("1️⃣ Take photos with your phone's <b>native camera app</b>, then upload them here "
                  "(better quality + lens data for accurate area).<br>"
-                 f"2️⃣ Phone <b>flat, pointing straight down</b>, lens <b>{camera_height_cm:.0f} cm above the heads</b> (not the soil).<br>"
-                 "3️⃣ <b>Main 1x camera</b> — no zoom, crop or filters.<br>"
+                 f"2️⃣ Phone <b>flat, pointing straight down</b>. Choose a height of about "
+                 f"<b>{REC_MIN_CM}–{REC_MAX_CM} cm above the heads</b> (not the soil), "
+                 "<b>measure it</b>, and enter it in <b>Settings ⬅️</b>. Use the same height for every photo.<br>"
+                 "3️⃣ <b>Main 1x camera</b>, 4:3 photo size — no zoom, crop or filters.<br>"
                  "4️⃣ Soft light, no half frame shadows, sharp focus. Upload the <b>original</b> photo.")
-        cover = f"One photo ≈ <b>{w_cm:.0f} × {l_cm:.0f} cm</b> (<b>{w_cm * l_cm / 929.03:.1f} ft²</b>)."
+
+        cover = (f"Current setting: <b>{camera_height_cm:.0f} cm</b> → one photo ≈ "
+                 f"<b>{w_cm:.0f} × {l_cm:.0f} cm</b> (<b>{w_cm * l_cm / 929.03:.1f} ft²</b>).")
+
+        if camera_height_cm < REC_MIN_CM:
+            cover += "<br>⚠️ Very low: the photo covers a small area, so take more photos per field."
+        elif camera_height_cm > REC_MAX_CM:
+            cover += "<br>⚠️ Too high: wheat heads get too small for the AI to detect."
     else:
         steps = ("1️⃣ Take photos with your phone's <b>native camera app</b>, then upload them here.<br>"
                  "2️⃣ Place your <b>quadrat / frame</b> on the canopy and shoot <b>straight down</b>.<br>"
@@ -281,7 +293,7 @@ def show_quick_tips():
     st.markdown(f"""<div class="tip-card">
 <span class="tip-title">📸 Quick Photo Tips</span><br>
 {steps}<br>
-<span style="color:#555;">📐 {cover} &nbsp;·&nbsp; Full guide in the sidebar ⬅️</span>
+<span style="color:#555;">📐 {cover}<br>Full guide in the sidebar ⬅️</span>
 </div>""", unsafe_allow_html=True)
 
 
